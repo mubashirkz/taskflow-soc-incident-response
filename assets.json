@@ -2,15 +2,15 @@
     "company": "TaskFlow Software",
     "scoring_method": {
         "scale": "1-5",
-        "description": "CIA scores represent the business impact if confedentiality, integrity, or availability is compromised.",
-        "risk_calculation": "Average of confedentiality, integrity, and availability scores"
+        "description": "CIA scores represent the business impact if confidentiality, integrity, or availability is compromised.",
+        "risk_calculation": "Average of confidentiality, integrity, and availability scores"
     },
     "assets": [
         {
             "id": "TF-001",
             "asset_name": "Web Application",
             "description": "Customer-facing SaaS project management web application.",
-            "confedentiality": 4,
+            "confidentiality": 4,
             "integrity": 5,
             "availability": 5,
             "risk_score": 4.67,
@@ -20,7 +20,7 @@
             "id": "TF-002",
             "asset_name": "REST API",
             "description": "Backend API used by the Web application to process requests and data.",
-            "confedentiality": 4,
+            "confidentiality": 4,
             "integrity": 5,
             "availability": 5,
             "risk_score": 4.67,
@@ -30,7 +30,7 @@
             "id": "TF-003",
             "asset_name": "Customer database",
             "description": "Database containing customer accounts and project information",
-            "confedentiality": 5,
+            "confidentiality": 5,
             "integrity": 5,
             "availability": 4,
             "risk_score": 4.67,
@@ -40,18 +40,18 @@
             "id": "TF-004",
             "asset_name": "Authentication Service",
             "description": "Service responsible for user login and access control",
-            "confedentiality": 5,
+            "confidentiality": 5,
             "integrity": 5,
             "availability": 5,
             "risk_score": 5.0,
-            "risk_level":"Critical",
+            "risk_level": "Critical"
         },
         {
             "id": "TF-005",
             "asset_name": "CI/CD Pipeline",
             "description": "Pipeline used to build, test and deploy Taskflow software.",
-            "confedentiality": 3,
-            "integrity": 4,
+            "confidentiality": 3,
+            "integrity": 5,
             "availability": 4,
             "risk_score": 4.0,
             "risk_level": "High"
@@ -60,7 +60,7 @@
             "id": "TF-006",
             "asset_name": "Source code Repository",
             "description": "Repository containing Taskflow Application source code.",
-            "confedentiality": 4,
+            "confidentiality": 4,
             "integrity": 5,
             "availability": 3,
             "risk_score": 4.0,
@@ -70,11 +70,11 @@
             "id": "TF-007",
             "asset_name": "Logging and Monitoring System",
             "description": "Central system used by the SOC analyst to collect and monitor security events.",
-            "confedentiality": 3,
+            "confidentiality": 3,
             "integrity": 4,
             "availability": 4,
             "risk_score": 3.67,
             "risk_level": "High"
-        },
+        }
     ]
 }
