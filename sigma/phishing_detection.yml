@@ -1,0 +1,26 @@
+title: TaskFlow Suspicious Phishing Email
+id: 7f3d9e2a-6c14-4b7e-9a51-2d5c8e4f1021
+status: experimental
+description: Detects simulated phishing email events in the TaskFlow security dataset.
+author: Mubashir Ahmed
+date: 2026-10-07
+
+logsource:
+  category: application
+
+detection:
+  selection:
+    event.category: email
+    event.action: received
+    threat.indicator.type: phishing
+  condition: selection
+
+falsepositives:
+  - Security awareness phishing simulations
+  - Legitimate emails incorrectly tagged as phishing
+
+level: high
+
+tags:
+  - attack.initial-access
+  - attack.t1566
