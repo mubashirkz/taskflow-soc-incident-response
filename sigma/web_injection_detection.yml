@@ -1,0 +1,26 @@
+title: TaskFlow Suspicious Web Injection
+id: 94b23d61-7f85-4a10-a671-8c2f539ed214
+status: experimental
+description: Detects simulated web injection events in the TaskFlow security dataset.
+author: Mubashir Ahmed
+date: 2026-10-07
+
+logsource:
+  category: application
+
+detection:
+  selection:
+    event.category: web
+    event.action: request
+    threat.indicator.type: web-injection
+  condition: selection
+
+falsepositives:
+  - Authorized penetration testing
+  - Security testing and vulnerability scanning
+
+level: high
+
+tags:
+  - attack.initial-access
+  - attack.t1190
