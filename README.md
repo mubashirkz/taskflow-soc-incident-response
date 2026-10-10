@@ -40,7 +40,7 @@ These results will help prioritize monitoring and detection rules in the next st
 ## Status
 
 - [x] Task 1 - Asset Inventory and Risk Register
-- [ ] Task 2 - Sigma Detection Rules
+- [x] Task 2 - Sigma Detection Rules
 - [ ] Task 3 - Security Monitoring Dashboard
 - [ ] Task 4 - Incident Response Playbooks and Tabletop Exercise
 - [ ] Task 5 - Final Hand-over Package
