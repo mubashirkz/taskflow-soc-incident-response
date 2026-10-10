@@ -49,3 +49,8 @@ These results will help prioritize monitoring and detection rules in the next st
 
 Mubashir Ahmad  
 Cyber Security Intern
+
+
+### Task 2 — Sigma Detection Rules in Elastic Stack
+
+I implemented and tested Sigma detection rules in Elastic Security to identify simulated phishing emails and web-injection attacks. I converted the detection logic into Elasticsearch-compatible queries, configured SIEM rules in Kibana, and verified that both attack scenarios generated security alerts. I also tested the rules against 10 benign log events and observed zero false-positive alerts (0%). The testing was performed using a controlled sample dataset, so the results do not represent production accuracy.
