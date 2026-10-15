@@ -124,3 +124,40 @@ Further investigation would require additional application, endpoint, and authen
 
 **Investigation Status:** Initial analysis completed  
 **Confirmed Compromise:** Not established
+
+
+## Dashboard Alert Testing
+
+### Objective
+Verify that the TaskFlow SOC Security Monitoring Dashboard
+updates when a new simulated security event is ingested.
+
+### Testing Procedure
+1. Created a simulated high-severity SQL injection
+   test event using Elasticsearch Dev Tools.
+2. Inserted the event into the taskflow-logs index.
+3. Refreshed the SOC monitoring dashboard.
+4. Compared the security metrics before and after ingestion.
+5. Deleted the simulated event after testing.
+
+### Results
+- Security events increased from 5 to 6.
+- High-severity events increased from 4 to 5.
+- High-severity percentage increased from 80% to 83.33%.
+- Dashboard successfully reflected the new event.
+
+### Evidence
+![Dashboard Alert Test](../screenshots/task3_dashboard_alert_test.png)
+
+### Challenges and Lessons Learned
+The existing logs did not contain host.name or asset.name
+fields, so application endpoints and source IP addresses
+were used to investigate potentially affected components.
+
+This test demonstrated how Elasticsearch ingestion,
+ES|QL queries, and Kibana visualizations work together
+to support SOC monitoring and incident investigation.
+
+### Conclusion
+The dashboard refresh test passed. The simulated event
+was removed after testing to preserve the original dataset.
