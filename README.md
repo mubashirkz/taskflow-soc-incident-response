@@ -141,3 +141,29 @@ event.category:web AND event.action:request AND threat.indicator.type:web\-injec
 ```
 
 The corresponding detection rules are configured and enabled in Kibana using KQL. Screenshots above show their enabled status, index patterns, and deployed queries.
+
+
+## Task 3 - SOC Security Monitoring Dashboard
+
+Created a security monitoring dashboard using Elastic Stack and Kibana.
+
+### Dashboard Features
+- Security event monitoring
+- Severity distribution visualization
+- Source IP activity analysis
+- Automatic refresh every 30 seconds
+
+### Testing Results
+- 18 sample log events analyzed
+- 5 potential security events identified
+- Severity distribution: 80% High, 20% Medium
+- Source IP activity visualized using a bar chart
+
+### Dashboard Evidence
+![TaskFlow SOC Dashboard](screenshots/taskflow_soc_dashboard.png)
+
+### Tools Used
+- Elastic Cloud
+- Kibana
+- Elasticsearch
+- ES|QL
