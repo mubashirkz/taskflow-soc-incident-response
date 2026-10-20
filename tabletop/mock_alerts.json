@@ -1,0 +1,50 @@
+
+{
+  "incident_id": "INC-TF-001",
+  "company": "TaskFlow Software",
+  "scenario": "API Injection Attack",
+  "simulation": true,
+  "severity": "High",
+  "target_asset": "TF-002",
+  "at_risk_asset": "TF-003",
+  "attacker_ip": "203.0.113.45",
+  "detection_source": "Simulated Elastic Security Alerts",
+  "alerts": [
+    {
+      "timestamp": "2026-10-20T09:00:00Z",
+      "event_type": "Suspicious API Request",
+      "source_ip": "203.0.113.45",
+      "destination": "/api/projects",
+      "http_method": "GET",
+      "http_status": 400,
+      "severity": "Medium",
+      "description": "API request rejected due to suspicious input."
+    },
+    {
+      "timestamp": "2026-10-20T09:02:00Z",
+      "event_type": "Repeated Injection Attempts",
+      "source_ip": "203.0.113.45",
+      "destination": "/api/projects",
+      "http_method": "GET",
+      "http_status": 403,
+      "severity": "High",
+      "description": "Multiple suspicious requests detected from the same IP."
+    },
+    {
+      "timestamp": "2026-10-20T09:05:00Z",
+      "event_type": "Web Injection Detection Alert",
+      "source_ip": "203.0.113.45",
+      "destination": "/api/projects",
+      "severity": "High",
+      "description": "Simulated Elastic detection rule triggered."
+    },
+    {
+      "timestamp": "2026-10-20T09:08:00Z",
+      "event_type": "Potential Database Exposure",
+      "source_ip": "203.0.113.45",
+      "target_asset": "TF-003",
+      "severity": "Critical",
+      "description": "Possible database exposure requires investigation; compromise is not confirmed."
+    }
+  ]
+}

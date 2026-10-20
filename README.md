@@ -42,7 +42,7 @@ These results will help prioritize monitoring and detection rules in the next st
 - [x] Task 1 - Asset Inventory and Risk Register
 - [x] Task 2 - Sigma Detection Rules
 - [x] Task 3 - Security Monitoring Dashboard
-- [ ] Task 4 - Incident Response Playbooks and Tabletop Exercise
+- [x] Task 4 - Incident Response Playbooks and Tabletop Exercise
 - [ ] Task 5 - Final Hand-over Package
 
 ## Author
@@ -179,3 +179,66 @@ See [Task 3 Incident Investigation](reports/task3_incident_investigation.md).
 - ES|QL
 - GitHub
 - VS Code
+
+## Task 4 - Incident Response Playbooks and Tabletop Exercise
+
+Developed three incident response playbooks and documented a simulated API injection incident to evaluate TaskFlow Software's SOC response procedures.
+
+### Incident Response Playbooks
+
+Created three playbooks covering detection, investigation, containment, eradication, recovery, responsibilities, and incident closure.
+
+| Playbook | Affected Assets | PDF |
+|---|---|---|
+| Phishing Incident Response | TF-004, TF-003, TF-001, TF-007 | [Phishing Playbook](playbooks/phishing_playbook.pdf) |
+| Ransomware Incident Response | TF-003, TF-001, TF-002, TF-005, TF-006, TF-007 | [Ransomware Playbook](playbooks/ransomware_playbook.pdf) |
+| API Injection Incident Response | TF-002, TF-003, TF-001, TF-004, TF-007 | [API Injection Playbook](playbooks/api_injection_playbook.pdf) |
+
+Each playbook was exported as a two-page PDF and references the Task 1 asset inventory.
+
+### Tabletop Exercise
+
+Conducted a simulated API injection incident response walkthrough using mock security alerts.
+
+**Incident ID:** INC-TF-001
+
+**Scenario:** Suspicious API requests targeting TaskFlow's REST API (TF-002), with potential risk to the Customer Database (TF-003).
+
+**Exercise Findings:**
+- Analyzed four simulated security alerts.
+- Identified repeated suspicious requests from a single test IP.
+- Reviewed the incident timeline and response decisions.
+- Walked through proposed containment, eradication, and recovery procedures.
+- Identified four security gaps and documented improvement recommendations.
+- No actual database compromise was confirmed.
+- No live containment or recovery actions were performed.
+
+### Tabletop Evidence
+
+- [Tabletop Exercise Report](tabletop/tabletop_exercise_report.md)
+- [Mock Security Alerts](tabletop/mock_alerts.json)
+- [API Injection Response Playbook](playbooks/api_injection_playbook.md)
+
+### Improvement Log
+
+| ID | Improvement Recommendation | Priority |
+|---|---|---|
+| IMP-001 | Improve API request logging and Elastic Security correlation | High |
+| IMP-002 | Enable database audit logging | High |
+| IMP-003 | Test WAF blocking and API rate-limiting procedures | High |
+| IMP-004 | Conduct authorized API recovery and security regression testing | Medium |
+
+### Tools Used
+
+- Visual Studio Code
+- Markdown
+- Markdown PDF
+- JSON
+- GitHub
+- Elastic Security and Kibana (previous detection and monitoring work)
+
+### Task 4 Outcome
+
+Completed three incident response playbooks and documented a tabletop exercise demonstrating the proposed response to an API injection incident.
+
+The exercise identified improvements needed in API logging, database auditing, containment procedures, and recovery testing. These findings will support the final project handover in Task 5.
