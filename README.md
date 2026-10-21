@@ -1,4 +1,4 @@
-# TaskFlow Software SOC Incident Response Package
+﻿# TaskFlow Software SOC Incident Response Package
 
 ## Overview
 
@@ -242,3 +242,22 @@ Conducted a simulated API injection incident response walkthrough using mock sec
 Completed three incident response playbooks and documented a tabletop exercise demonstrating the proposed response to an API injection incident.
 
 The exercise identified improvements needed in API logging, database auditing, containment procedures, and recovery testing. These findings will support the final project handover in Task 5.
+
+## Task 5 - Final Handover and Elastic Cloud Demo
+
+### Live Elastic Cloud Demo
+
+- [Elastic Security Project](https://my-security-project-a4fd4d.kb.us-central1.gcp.elastic.cloud/app/security/get_started)
+- [TaskFlow SOC Dashboard](https://my-security-project-a4fd4d.kb.us-central1.gcp.elastic.cloud/app/r/s/DELQe)
+
+### How to View the Demo
+
+1. Open the TaskFlow SOC Dashboard link.
+2. Sign in using an authorized Elastic Cloud account with access to the project.
+3. Set the Kibana time range to **Last 30 days**, or a custom range covering the October 2026 test events.
+4. Review the security monitoring charts, source IP activity, and affected application endpoints.
+5. Open Elastic Security to review the configured detection rules and available alerts.
+
+**Access note:** The dashboard is hosted in Elastic Cloud and may require authentication and project permissions. Public reviewer access has not yet been verified.
+
+**Data note:** This demonstration uses simulated security events and does not represent live production monitoring.
