@@ -121,12 +121,12 @@ These results demonstrate the configured detection workflow on a limited simulat
 
 ### Sigma-to-Elasticsearch Query Conversion
 
-The original Sigma rules and their converted Lucene queries are stored in the `sigma/` directory.
+The original Sigma rules and their converted Lucene queries are stored in the `rules/` directory.
 
 | Detection | Original Sigma rule | Converted Lucene query |
 |---|---|---|
-| Phishing | [phishing_detection.yml](sigma/phishing_detection.yml) | [phishing_detection.lucene](sigma/phishing_detection.lucene) |
-| Web injection | [web_injection_detection.yml](sigma/web_injection_detection.yml) | [web_injection_detection.lucene](sigma/web_injection_detection.lucene) |
+| Phishing | [phishing_detection.yml](rules/phishing_detection.yml) | [phishing_detection.lucene](rules/phishing_detection.lucene) |
+| Web injection | [web_injection_detection.yml](rules/web_injection_detection.yml) | [web_injection_detection.lucene](rules/web_injection_detection.lucene) |
 
 **Converted phishing query (Lucene):**
 
